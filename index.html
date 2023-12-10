@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+       <div class="container">   <!-- container-doesn't add li-item -->
+            <div class="sub-container">  <!--container doesn't take output -->
+
+                    <!-- budget-container -->
+                <div class="total-amount-container">
+                    <h3>Budget</h3>
+                    <p class="hide error" id="budget-error"> <!--6th budget-error-->
+                        Value cann't be empty or negative
+                    </p>
+                    <input type="number" id="total-amount" placeholder="Enter Total Amopunt"/> <!-- 1st total ammount -->
+                    <button class="submit" id="total-amount-button">Set Budget</button> <!--4th total-amount button-->
+                </div>
+                <!-- Expenditure Container-->
+                <div class="user-amount-container">
+                    <h3>Expenses</h3>
+                    <p class="hide error" id="Product-title-error">Value Cann't Empty</p> <!--7th product-title-error -->
+                    <input type="text" class="product-title" id="product-title" placeholder="Enter Title of Product"/> <!--5th Product title-->
+                    <input type="number" id="user-amount" placeholder="Enter  Cost of Product "/> <!-- 2st user-amount-->
+                    <button class="submit" id="check-amount-button">Check Amount</button>  <!--3rd check-amount-button-->
+                </div>
+            </div>
+            <!-- output -->
+            <div class="output-container flex-space">
+                <div>
+                    <p>Total Budget</p>
+                    <span id="amount">0</span>
+                </div>
+                <div>
+                    <p>Expenses</p>
+                    <span id="expenditure-value">0</span>
+                </div>
+                <div>
+                    <p>Balance</p>
+                    <span id="balance-amount">0</span>
+                </div>
+            </div>
+        </div>
+        <!-- list -->
+        <div class="list">
+            <h3>Expance List</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>
